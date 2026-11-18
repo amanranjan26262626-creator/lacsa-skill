@@ -2,7 +2,7 @@
 // Needs RAZORPAY_KEY_SECRET (and optionally RAZORPAY_KEY_ID) set in Vercel → Settings → Environment Variables.
 module.exports = async (req, res) => {
   if (req.method !== 'POST') return res.status(405).json({ error: 'POST only' });
-  const keyId = process.env.RAZORPAY_KEY_ID || 'rzp_live_jofPSfDcGHfcvy';
+  const keyId = process.env.RAZORPAY_KEY_ID || 'rzp_live_U1jT81imDce1ka';
   const secret = process.env.RAZORPAY_KEY_SECRET;
   if (!secret) return res.status(503).json({ error: 'Payment key secret not configured' });
   try {

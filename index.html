@@ -584,7 +584,7 @@ var WA='https://wa.me/916209721261?text=Hi%2C%20I%20want%20to%20join%20the%20AI%
 var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
 function hydrate(r){$$('img[data-i]',r).forEach(function(i){if(!i.src)i.src=IMG[i.getAttribute('data-i')]||''});$$('[data-wa]',r).forEach(function(a){a.href=WA;a.target='_blank';a.rel='noopener'})}
 // Razorpay checkout
-var RZP_KEY='rzp_live_jofPSfDcGHfcvy',WA_NUM='916209721261',PRICE=99900,rzpLoad=null;
+var RZP_KEY='rzp_live_U1jT81imDce1ka',WA_NUM='916209721261',PRICE=99900,rzpLoad=null;
 function loadRzp(){if(window.Razorpay)return Promise.resolve();if(rzpLoad)return rzpLoad;rzpLoad=new Promise(function(ok,no){var sc=document.createElement('script');sc.src='https://checkout.razorpay.com/v1/checkout.js';sc.onload=ok;sc.onerror=function(){rzpLoad=null;no()};document.head.appendChild(sc)});return rzpLoad}
 function toWA(pid,name,phone){var t='Hi, I have paid ₹999 for the AI Skills Bootcamp.'+(name?'\nName: '+name:'')+(phone?'\nPhone: '+phone:'')+(pid?'\nPayment ID: '+pid:'')+'\nPlease add me to the batch.';location.href='https://wa.me/'+WA_NUM+'?text='+encodeURIComponent(t)}
 function payNow(btn){var old=btn.innerHTML;btn.style.pointerEvents='none';btn.style.opacity='.75';
