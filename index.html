@@ -586,7 +586,7 @@ function hydrate(r){$$('img[data-i]',r).forEach(function(i){if(!i.src)i.src=IMG[
 // Razorpay checkout
 var RZP_KEY='rzp_live_U1jT81imDce1ka',WA_NUM='916209721261',PRICE=99900,rzpLoad=null;
 function loadRzp(){if(window.Razorpay)return Promise.resolve();if(rzpLoad)return rzpLoad;rzpLoad=new Promise(function(ok,no){var sc=document.createElement('script');sc.src='https://checkout.razorpay.com/v1/checkout.js';sc.onload=ok;sc.onerror=function(){rzpLoad=null;no()};document.head.appendChild(sc)});return rzpLoad}
-function toWA(pid,name,phone){var t='Hi, I have paid ₹999 for the AI Skills Bootcamp.'+(name?'\nName: '+name:'')+(phone?'\nPhone: '+phone:'')+(pid?'\nPayment ID: '+pid:'')+'\nPlease add me to the batch.';location.href='https://wa.me/'+WA_NUM+'?text='+encodeURIComponent(t)}
+function toWA(pid,name,phone){var t='Hi, I have paid ₹999 for the AI Skills Bootcamp.'+(name?'\nName: '+name:'')+(phone?'\nPhone: '+phone:'')+(pid?'\nPayment ID: '+pid:'')+'\nPlease add me to the batch.';var d=document.createElement('div');d.style.cssText='position:fixed;inset:0;z-index:100;background:rgba(18,22,56,.92);color:#fff;display:grid;place-items:center;font:600 18px Poppins,system-ui,sans-serif;text-align:center;padding:24px';d.textContent='Payment successful. Opening WhatsApp...';document.body.appendChild(d);location.replace('https://wa.me/'+WA_NUM+'?text='+encodeURIComponent(t))}
 function payNow(btn){var old=btn.innerHTML;btn.style.pointerEvents='none';btn.style.opacity='.75';
  var done=function(){btn.innerHTML=old;btn.style.pointerEvents='';btn.style.opacity=''};
  var orderP=fetch('/api/order',{method:'POST'}).then(function(r){return r.ok?r.json():null}).catch(function(){return null});
@@ -594,8 +594,8 @@ function payNow(btn){var old=btn.innerHTML;btn.style.pointerEvents='none';btn.st
   var o={key:RZP_KEY,amount:PRICE,currency:'INR',name:'LACSA TECH',description:'30-Day AI Skills Bootcamp',
    notes:{course:'AI Skills Bootcamp'},theme:{color:'#4936F5'},
    handler:function(res){
-    var go=function(){toWA(res.razorpay_payment_id)};
-    if(res.razorpay_order_id&&res.razorpay_signature){fetch('/api/verify',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(res)}).then(go,go)}else go()},
+    try{if(res.razorpay_signature){var bd=JSON.stringify(res);if(!(navigator.sendBeacon&&navigator.sendBeacon('/api/verify',new Blob([bd],{type:'application/json'}))))fetch('/api/verify',{method:'POST',keepalive:true,headers:{'Content-Type':'application/json'},body:bd})}}catch(e){}
+    toWA(res.razorpay_payment_id)},
    modal:{ondismiss:done}};
   if(od&&od.id)o.order_id=od.id;
   var r=new Razorpay(o);r.on('payment.failed',function(){done()});r.open();done()
