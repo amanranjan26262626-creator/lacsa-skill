@@ -8,5 +8,9 @@ module.exports = async (req, res) => {
   if (!secret || !o || !p || !s) return res.status(400).json({ verified: false });
   const expected = crypto.createHmac('sha256', secret).update(o + '|' + p).digest('hex');
   const ok = s.length === expected.length && crypto.timingSafeEqual(Buffer.from(s), Buffer.from(expected));
+  if (ok && b.product === 'workshop') {
+    const clean = (v) => String(v || '').slice(0, 100);
+    console.log('WORKSHOP_PAID', JSON.stringify({ time: new Date().toISOString(), name: clean(b.name), phone: clean(b.phone), payment: clean(p) }));
+  }
   return res.status(ok ? 200 : 400).json({ verified: ok });
 };
