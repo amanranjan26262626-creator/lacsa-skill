@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>₹9 Live AI Workshop · Sat 28 Nov, 8 PM · LACSA TECH</title>
+<title>₹9 Live AI Workshop: Learn to earn and get hired with AI · 28 Nov, 8 PM</title>
 <meta name="description" content="Live on Zoom: make a poster, a resume and a website with AI in one evening. Saturday 28 November, 8 PM. Seat ₹9.">
 <meta property="og:title" content="₹9 Live AI Workshop · Sat 28 Nov, 8 PM">
 <meta property="og:description" content="Make a poster, a resume and a website with AI, live with Aman Ranjan, LACSA TECH.">
@@ -39,6 +39,18 @@ header{padding-top:max(12px,env(safe-area-inset-top,0px))}
 @keyframes pulse{70%{box-shadow:0 0 0 9px rgba(240,62,62,0)}100%{box-shadow:0 0 0 0 rgba(240,62,62,0)}}
 .hero h1{font-size:clamp(34px,8vw,58px);font-weight:800;margin:16px 0 14px}
 .hero h1 .hl{background:var(--pri);color:#fff;padding:0 10px;border-radius:12px;display:inline-block;transform:rotate(-1.5deg)}
+.hero h1 .hl2{background:var(--gold);color:var(--ink);padding:0 10px;border-radius:12px;display:inline-block;transform:rotate(1.5deg)}
+.paths{display:flex;flex-wrap:wrap;gap:8px;margin:-6px 0 20px}
+.paths span{background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:7px 13px;font:600 14px Poppins,sans-serif}
+.earn{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.ep{border-radius:22px;padding:22px;color:#fff;position:relative;overflow:hidden}
+.ep h3{font-size:21px;margin:10px 0 8px}
+.ep p{margin:0;font-size:15px;opacity:.9}
+.ep .ic{font-size:34px}
+.ep.a{background:linear-gradient(140deg,#4936F5,#7A6CFF)}
+.ep.b{background:linear-gradient(140deg,#0E8F6A,#12B886)}
+.ep.c{background:linear-gradient(140deg,#121638,#3B2F8F)}
+.note{font-size:13px;color:var(--mut);margin-top:14px}
 .hero p.lead{font-size:18px;margin:0 0 22px;max-width:34em}
 .when{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:22px}
 .when div{background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:12px;text-align:center}
@@ -68,6 +80,7 @@ input{width:100%;font:500 16px Poppins,sans-serif;padding:13px 14px;border:1.5px
 
 /* sections */
 section{padding-block:56px}
+@media (max-width:860px){.earn{grid-template-columns:1fr}}
 .make{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
 .mk{border:1.5px solid var(--line);border-radius:22px;padding:22px;background:#fff}
 .mk img{width:48px;height:48px;margin-bottom:12px}
@@ -150,8 +163,9 @@ footer{padding:32px 0 120px;text-align:center;font-size:13px;color:var(--mut)}
  <div class="wrap hgrid">
   <div>
    <span class="live"><i></i>Live on Zoom · Hindi + English</span>
-   <h1>Make a poster, a resume and a website with <span class="hl">AI</span> in one evening</h1>
-   <p class="lead sub">A 90-minute live workshop. You follow along on your phone or laptop and leave with three real things you made yourself. No coding needed.</p>
+   <h1>Learn to <span class="hl">earn money</span> and get a <span class="hl2">job</span> with AI</h1>
+   <p class="lead sub">A 90-minute live workshop. Learn to make posters, resumes and websites with AI: the skills shops, coaching centres and companies <b style="color:var(--ink)">pay for every day</b>. No coding needed.</p>
+   <div class="paths"><span>💰 Freelance income</span><span>💼 Jobs and internships</span><span>🏪 Your own business</span></div>
    <div class="when">
     <div><b>Sat 28 Nov</b><span>Date</span></div>
     <div><b>8:00 PM</b><span>India time</span></div>
@@ -162,7 +176,7 @@ footer{padding:32px 0 120px;text-align:center;font-size:13px;color:var(--mut)}
   <div class="ticket" id="seat">
    <div class="top">
     <small>Your seat for the live workshop</small>
-    <div class="price"><b>₹9</b><span>one-time · pay by UPI</span></div>
+    <div class="price"><b>₹9</b><span>less than a cup of chai · pay by UPI</span></div>
    </div>
    <form id="f" novalidate>
     <div class="fld">
@@ -175,7 +189,7 @@ footer{padding:32px 0 120px;text-align:center;font-size:13px;color:var(--mut)}
      <div class="tel"><span>+91</span><input id="p" name="phone" inputmode="numeric" autocomplete="tel-national" placeholder="10-digit number" maxlength="14" required></div>
      <div class="err" id="pe" aria-live="polite"></div>
     </div>
-    <button class="btn" id="go" type="submit">Book my seat · ₹9</button>
+    <button class="btn" id="go" type="submit">Yes, book my seat · ₹9</button>
     <div class="safe">🔒 Secure payment by Razorpay. The Zoom link comes on WhatsApp.</div>
     <div class="cd" id="cd" aria-label="Time left until the workshop starts"></div>
    </form>
@@ -185,13 +199,14 @@ footer{padding:32px 0 120px;text-align:center;font-size:13px;color:var(--mut)}
 
 <section>
  <div class="wrap">
-  <h2>What you'll make, live</h2>
-  <p class="sub">Three things, built step by step on screen with free AI tools.</p>
-  <div class="make">
-   <div class="mk p1"><img src="data:image/webp;base64,UklGRpQQAABXRUJQVlA4WAoAAAAQAAAAfwAAfwAAQUxQSLwGAAABsEbbtqlJ0j733IjIbJdt27Zt27Zt27Zt27Zt24i85579I/J778X7brt7jIiYAPxfRhGRMFwRkb8vIiHGgJohxiDy90BCVAx/yAhjTz7LbLPMMt24fx0qGG5UkaJJiAAgo86z6dFXPPjuD7/2Z885/frdB49edvimc4yAgTFIqUIEgInWO/GJH9msf/PwMauMDQAxFEhUAJ1z/4d/40BLZtmrZkvGgT/fs9sMARCVsogCmHKvZ51kTtmdjbrnlEnak3tMAUClIAqEJa/pJ5myc5DdEsn+m1cbCqgUIgiwymMkU3a20nMi+cYeYwAqJVBg2YdJN2eL3TL55dETACrdFgKmvJbMma3PRn5z6BiAdpcCO31Pz+xKT+TH2/QgSBcpJrqNTOxaN/KpRQDtFlEs8SnN2c1u5JmjQqUrJGD7zMRuz5lvLgWELhDBkfTMAibymD5o6yTgNJqziDnz4cmgLRPF6UwspvGzpaHSJlEcwcSCGn0HiLQoYjual4TZeQIQWqNYLJmzrG68YihCSwLG+5KZxU28cwSEVoiGO2gscOIjIyO0QbEzE4uc+MTICIMXMOnP2cvExEdGQGjBTTSWOvGOIUEGSbE8jeVOvAQqgyLS9wJzwZh4IHRQFBsys+SeuAp0EET6XvWyMft3kyI0F7EaMwtvfLhHpTGRh91Kx8Q9oU0pZndn8T3/OhVCQwGn0spH4+1NCf7yGfPfARqXhzYSsTwz/x5mvtgn0oTiXE9/F5i5LrQBwZD3mQvjljLpybyOv9ArDQTM4c6iurGieSVmLg+tF7EbU1GM/OWuA9ZdfKEVdrzqW9Iqmd+GUC/girJkfnvwxOg45u6fMldxDpsKoY6g9016QYy3TgJIjKoaAzD2JczeicYDoXUCJuwvifEkIAZ0lAjsyeydMl+KkBqKRVgQ4zkIispBsTetEz3PAq0RsRmNpcx8ZkgIqCkR19A6Je6FWOsgDiuG21xQ1A4yzreeOxhvh0g1xWlMpTBej4AGFYfTOji//itqBFxJK4RnLi+xiSCT9dM7+ZwI1QQ3lYPfjABpAiIPMw+PmRsh1rmtGJn3o2HFMRzWIfEg9FQD7ihG4oXQZiK2ZqpwFrSa4JaCnNLcWswdjFdB6lxXkLObW6/SjXUCLiyG8WZAGunBrkwVbqgTcRxTITLf62so4NxKFyPU2bMY9DybaBOC3reYOyQej1hnHeZSJB6LRlQWorPCTnUC5mcxM78ZU0ITuJ7WwZ1LQasJxvqFXggaz0WUWhGL5MxO/GVshDrxVeZSuHEt9NRRjPw2KxgfF9QNuJKpFPT880KIUiniT/fQ2DnxEGidiD0KwswfVgRikAESIjDBQzRW9DxbvYBF6F4MZvKY0QAgBAEQ1vuYxormTwZBXcEIX7MgdOcnh8/5BwDomXCrJ0hjJW4CrSe4hVYQ0kh+dPelF1734u9kdlbN/u6fRGohYhemotATO1pmdeNGUNRXTJ/pRSHdzZJlZ03jwz1BGgD0eebCNJzzz9MioEnFgUx/B9y4HhQNzWBevpy5JxQNizzkVrpE7gxF04pNmIvm5vx4OSgaF/ztY8/F8pxIXjweFIOoOJBWHHf3bCmTHHbN/IBiMIOM8bXnLvOckuWK7uz425P7Tw0EweAqDqR1V2aD9uvXL95w5DoTB0ACBjvIiB957qZMvnDWPlttsNYaq6+x5pprrr7qikvMO8N4f4kYGANaqNiI1kWZj8zfg0YlxiBopajeR+uazNuHAhpjjKoaY9SBIYigxQFT/pK9SzK/HANR0O2KbZi6JPFIRHS/KK5m6o7M5aQEEBnpNVpXkItAS4CAab/z3A3GTSQWAYplUvYuSLwSoQyI2JDm7XP+PJ6EMiBiZ5q3jsZDoYWAYi+aty77V6NLKIQo9mbObaPxYGghIIod6blt2b8aFaEQgGJjo7WMxp0Ri4GIZb9naln2FyMKGjHLW0ztovsc0HJAMc59NG9V4h6IBYGi70TS2nUxQkkQgHW/pXl7jHcDUhKIYuoHSfv7BSji/v00b0niRQgobQBme5BM3grjLojFgShky0/J5C3wNDVCeYAAjHPi72TywTLejIAyKzDdhYlMPihuw2YuFkSBGc/7hczmjXniblCUOwRg0kPeJ5nMGzHnSVApGBAU+PNaN/9O0sy9mpvT9oQICh8UwKS7PNRPkpYsZ/ecLTnJu+dBEJRfVABMvu01n7P6VxctBgT8nQwRAP4y59Yn3vT02x999MbDl+639EgAAv5+SoiCgaFv6NBeDAyKv7cSogqGG6IK/k7LcPGf3VZQOCCyCQAAMC8AnQEqgACAAD5dJo9FI6IhGjnFvDgFxLYEOADGTxT+c9XdtTx3m+WL/AfizlNKq81PoXnVeYB+sPTW8xH7P+rF6E/7H6gH8x/1/WFegX+1Xpsfuf8E/9Z/4n7vfAR+xf//9gD0AOFp/uf4odyb8c5TkvTeS/1Hir+tmta0APyp/y/ZZ/pfHX9T+wH/NP7N6WfsD9C39ZVu0f5lsFpurxY4Jghm+w/wrCgNJJEYvn/B/9T1SNIq0Hanj99LkUl7ViXHhtyLl+Ng2qCJ1AnaScxg4HHlyvc+QNwzfw1gdjcqEzrxo6ZhqjNXB3OAM8y+rvEMHYBHYkUx3E7SEHruyPA4iphYaxGKp+L9+aZ1P9tiUpWZqehVOMLa63oBk4DOGVibrt/FgdzRS8ia7UQ+y1PePPgPQp4YHlwqXNPi4E2ICAAbbx+j7Cii8m2VeMrhxc1BBUOSt3ih8fZjJmCvJD7lskl7xIJaxLB2r98nu1kbRHqI7sPcOIhZtVT3QWU3FgAA/uQliWXKXRX/+vJ+PuOtVgic295YreNqzcBzdDtFVtGvRFYCf/lIPybKCap303Cij6ngyk8DGBbCaFOQj5hH7t1n//pJahi0rqRblcOcz5w7kPSbq4sDurNvAqG1nuH7rHOzSqT0kTWjV2WGWN99kvnrLTLVbwq6tqrRImvdThQobt4Acr78SmPswde0bw9wGvyLQLfxp5q15j+0ott1rAajs7ZgcOiehVmgOG7qYaP0BAAnPnIbXvMiwRe4rb7YyKRb4W30R5j/sj35pwZosBreaNwRV0/Gs/q94TJ8qOBpf4w2yePImJXO6Nrmd3ewHhg+DSl0N6+HrmyW5bb332FwLktuvK2Q1Ac9mavxjlJEcp0L8O8rjbpd5wtcD2CbxB9vVhfOnqfxDYNeHH/YvIGkXkaZsFyo8kaXsnu237f/SOIidr4YUCNjLDS1Badq3bKUNy/IhyO/vsUOPjspPZrkauO1HtL+H/3IHiYxLDP8rV6FavQbHNchsCTl6fSaMKWblFAxssdYEAoi1FaIlT1aL78Io1I3Yh8NGZRMat41sglwMIdCYy9p3HYWTqT+G1QgV7SXlV20+wHq4KFoLd6xzp/gLlotsm8lh8ZCqbHelud7j96OcUVr+So4ttUb2nurweF0Pr8ji9PzmHn9y6vjsMomajb3PDLBMsjcnRFwyhdpRe1uEy/BrSADnI69BqY/vGovhpLQyci+UMUxt/cSI84UbIgfnrHPmJK5BpcvKY+Aj+8PdaTKlEy8//7U1DhKkG5eoPFkwtwnKU9B9EtsMJzOzfIlP06Slge4ea5z2sG0QQq70VkZ3uOiNLRLlWVMvpdWm7KqbFtdvPQMHd7KoVHnp9P4S1MIbR9N7TReMdAEIDTJqKfiymaV+pvNLBVj3P04+OCm70+9XsGPZIh8QDvUHPGbd0r+eP/dvIXsCnh+IUT4l290hKcFgT3vOVpMOxkek2bu/kJ6CsLm3IYyWzvehp3qnMqsGSHankyS9I7bBkbv84Hk6DgYCOZDyWCtUPekFpeBOpNw2uQ91H2f3ufQQchrfb7KhLBka1jA5omCHmigIpzp2XheB3DSICOAAdB5ctCEphvLQtgYEet04LcfKl54td5seiSZHZVNpvevf96RMfdsKtmzmUZ/yyVpbhByyU9wJ/Oil7fBvh2oravieAJBgVxY0hy6cQJAwyCfkF2ex/LMNMYM2cJHUkRYam9FN+yuyazisuUeKPJvlkMgpY6dG2SzV4+KO0Iaa8VG/WUWZLCxfJFbgKy+v3l9TDL2YgqbRPBj+8lw6sFYUTZt/k7xCjzvyqr91RdnHDRxg0IJwXqW5YH8B3Bzy2CocRxj1nUUaJPL/lR+kFk3duR9JfjcvsBZ9O8frv1D0tbuuUA63AXTYs6HxpbVOVKzrVv9bux1KONfPnhvxvDSfi/yEY5nMc9ZJeLYei79z7fakqCRlsGm0meq+3/HUf+HIuO1MjPx52w5hmbk0jWBcQzbE9jhafLl1m/Fjyfo0eRfVFbhpsSoAIE27dYuZATgrfgCE+WoWHWZ1nH5PXLBsuuqgDzuBY64OZoYIlbieoK9ewLE3zJr2xxgW1UiyJZdNpfAmmoXa+EMCMvMagFNV0vN7XA7DKvHT1bUZC0wLH8EuNSB3/fV79lWo41U4S4dehOv6PozlyZnwJRHd+G4X5lEfLQEGVxf2CNBFIec4O1Mewd4AkNrSPbUJRDHgnV9FV6O54WSQUlzZs/kh6z0h2p5kOPKRdQyLozYDLnBfUNi8gTNoMChuWeafKMziiGu9g47AzDpTcLuxt63eKkOOolszes678SKYGGqa/Fn3svP2NOl3um09icZURSMA4tcMZw2D6GAORiOQN1xSe+yiUsXMUgDIg1SzaAh7oeaG28ALhS96hJhj0tOOyZd/9PsMoFCMkX+6sn5Wtt/SO8Ecu0sB7yp0fMNsLU4iRLAfTDRK/4jDCl6FnY47pA1M2KCgrtZ7yxbdmNClpGrw7zzYVsw/LeY8yQOHTzXNNdA0o9zsAI9yAuDeaAmmK69mfHkuhpbiep3UR5jBnT5dkzdEiiG5yybShbGSTea8qlN4fH83nMNVN30m27gB3UTjRdxlt0gEgQgnenLy3Azzqw5rtoOunAkjJYPXM9xR5+Hdk34n0k+F7jlYs2J6kZzUskr824//5eD//Ljv//lpIo8q/RYMieNR7+vJ7mJ/G+37WroXAkitRq98neeVbP1ClfyDZFHuAFagdm8ka5gmCMDP7Eob/iDvm9ADztpqj/Ys7nGzPIJHdWlarVCfV4hPLymO2RcBrN1eIeGGwtmLM2pKVSKdwTDAiABoqf1rG3a+FNhZXk3qOhKhE8xPKdpzGZCUle9kk/5kRa+eHZW7cAXN3EyeGEdsBAbO49KxUAVXKJRApGPlK7m/uaN8Ha19G3EeEg2uDF9nRwGbOEDQG/S+gs879PScVu2c0CFowiKxL8yM5BKdvI5W0kSvDhQj/fb19MuZH4TJsBgI/UZoAGN9F4CD2f9mOf6gqiCNkp1cOrMAWe/86q0sRWyXOqKqLC44OjVhz9xiZj4W0Mz/QLNdvxfS/y1FX2v55MjXyBZ2wXOrpaYJP7IyYewMDaJliAE4QAaqqbL1zSwe1g1PYUuUQULRvlNJTd2rm/hdj4V+PBSEYXhssFGV6ZUsUxXPkwGsxzzi72rAXu6EDtcgvocn8aaHWbAFrUPJ1+ABj9AUyPvdP+bZb1bm0K2yKH7wGn9wqs91JHiuQuGTNUj/4h1XLkB0HwnVIqgAAAAAA==" alt=""><h3>A poster</h3><p>Design a festival, shop or event poster with AI images and text in minutes.</p></div>
-   <div class="mk p2"><img src="data:image/webp;base64,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" alt=""><h3>A resume</h3><p>Turn your details into a clean, job-ready resume with ChatGPT, then polish it.</p></div>
-   <div class="mk p3"><img src="data:image/webp;base64,UklGRvYHAABXRUJQVlA4WAoAAAAQAAAAfwAAfwAAQUxQSO8BAAABkIL/fzIov/823F3TxUvXcEku8SIO6SKeXJNDctfoFt2lXSKR3GHv9mtsL8/+uETEBOA3ROuMNUW2xtmvQlB0+RowcdOeXbuLvGv3pomoXcTsYNG3i0g9DjNZ+YJXnAlXj+BiqFjwKlyE1CKw9xlKFnjfQupx5XP//ffff98+9kHpHti6+rxgLFnkiz71WIxjZNEjx8HW4bCMvmyey+DqEJwq3ylIDYIOTxjLFvmkAySfQVMoX2iCyecwlxULX3EuXD6LnfSl89wJm01gbjOULvCWgeQb/I6xdJHvBuVzmMZYvshpcPlW0rP4niuyieAMq/JVPA2RTOj8lKF8gU87I5PB0EgV4xCYPA4trDSo2AKXx2APvQaee2CyCOxjBg0CH1lInoZPjBpEfmzI49DMQBUDm+HybKTXwXNDFhFcYdAh8DJEMqDHM0YdIp/1QAaDsYxaRI6FSXNYQE8lPRfApRkc0eQITJKgbSujFpGtbSFpjV4T35jmMJ2BagZOh0ux2Eyvh+dm2BTIVQY9Aq8KEgX9XjPqEfm6L+TLLCYyahI5AfbLHJbwMxX1XAKXslKXz1yZtlyb5WmrwydNPoXVKRbzWXlfKel9xfkpIh33UNU9HQTpo1YfPK7kwdWjkFEEqoqkAdYZMSqKcRa/EQIAVlA4IOAFAADQIQCdASqAAIAAPl0okEUjqSGpMPU8ASALiUG4o0Qa7mqObv0zxAHn0dEB/ZusA9ADyw/2k+Dn9z8pX6gamk0Zxtco/gUnXLWYxHv7rYcIz1XdFP1n6M3/C4BT9QE92ug+sdd4qgyzxLSlIz0UbtGxYOOxG61EWJq9qp74nVpHJMPa13nK/fVt31+UP0jVRaCrlUxDQtcnXtDaGowtL/1tNnOKiht3C3HT/T+HBJXlxFqoAO9EIGI75fJRRaUa4UJITR+Vsi9uLukmgEXs9Tr6PveUhDr7Bsn5d2MHme5ur8ejIn3xuPn1u9CBYZXH1kyl1kUafxckGyGWiTPW8pt6JaEXIjmm5rgUj0AeWvtcs2kF1prHaAAA/v3OtdB/OOEXpe+SkTl7XRCHpVa/XsnY5DCHCr31lUnDfa8LNmMB62UKASq0oBhQnvItVOT/1/T93/VchH5//4nZ02KueZCCFX/SNh65yPRqGAO2fvt9IwKmuSz8/nQ2Ya2Pd1U6qSEDkNkJHgxXKPdVe9ydOxbFjPeXV6IDuan0R/ua51UiPHVaP8z15IusSHOQ/3gdJNR6CcM7OaZny+UFf4mBIBnvb8V5YhiKjsBQa3XK4fyw8peL20ymPsPYCvYpg9+y4ij5shpQijs+WMNHd+x/yWZjqjbxUjMkultouCgpp4iFfYpMHncVnf8SzmQMGu9xNlV7qC7OX49jy4wGwGRVvw7Uh4Tkyt+gG1/cU2l1tArNEYJX0iSM5ti9sqpHSMFNXneQzjb2DKmTBGzOtJnSnyp6H14ycHwogQ/8pXm7tfIFaKYV5e6FArKyN9zjaSxzbvzRSeAphXn24rRM7VHMnK24oelr0huLJH9dR+iyqE+HkFMHx+dCn5LkYMxflWKA69tZJcNN27l2g1/brvzm8BcQLgdOOaf52NAIh93/zv3EVsqhEmXVNTpWR696GZNC7RGbPPDWThnTr/BLZ1XsPpesELDI7BS35CcEW0eATue3DNpzVgvElw7zZGKx4sWdbK2FcyFqBvzi8o+07kwlMpaY7OBVNzUbOlTvq/94b6QGBs+eEV5/hd0lKTTuBEsM6eFC2LeWKJoZTHg6JeM3dmLvoNYpo7/ow+n+PiDc728u46OUZwmIPhvx8LXSCkX6E9N8RiFTaEjsRREzZ6DFFJr6FCKk6+9ZQh3gCE3mF/Rs4A7C56Imu1aKqNXNM3BZgjdt+nLNYBaP3g5zDJiCtNwT8RBhTajj9f+rtgENH2csoNVWgqzwraFuFoN40k3qOlzU3hqQxynpgW0Ly3Rv4knmzL2lbqqSv8Vx1IVimtISoa1tUOaCUQ3Tv0PQQSmtcMUmuzxFur1cCjD0ei8V1LbRDpd5U6Xhmi8i7FuPzfxcWXU6F15UPi9TpJdSHpDn3XArHfwF9FUKjHOJcUAewDqxfyQ7PP5zcgHmoHmn65CrVzYvccY/QvAcMZi0G7D0fP/FfNlBq1Oda1QmMPLrYeH/iH4rwvLRwRWUzsfqfa3duky6p/++H9EohX9nron+YG7zviHUEonpbQpZL8i29a90/MPeM429oNxb/RuU5LtWwMsow8HWEvAEyPLTSEbKPd8dQUb7fzHQdpnHVir04ZJfeKn/Hgw3Avt4+AIUUkFrq/Jq5ck9ExytdwH7mtcznM5yBwY7h2PPKIuf6n879ox5cGYTKCGnvGDDDRp8WvYwbuPZmTLBMTMt8OorRqJ1KkSJfiSvUOWfPDBRAXLePjZY7gLO3tfABFwjXqf/2IHXbSFkn/iV6OLBN+RQi1jNcl5KMTfYPvejXVAdEiEr0OmVA9i3mB3PrvAvOA75Bkh3i+dH7gx1G2AXLhOq31iMHFhYH/q/sTum/kGSBtwTzPrn1U78DOdXA9hMsdsOMnf1zvPpxdnL7ebAMjM+DyJlTpGS6xuNTjsMJ1NXHHDuCg8j9+p6dON0vAX32nqMIav5IhOmDuNK5dtpm2jY2af+yqjnxC5D6gFMgqoT6RDAkAAA" alt=""><h3>A website</h3><p>Launch a simple one-page website for yourself or a business with an AI builder.</p></div>
+  <h2>What you can do after the workshop</h2>
+  <p class="sub">You learn each skill by building it live, with free AI tools, on your own phone or laptop.</p>
+  <div class="earn">
+   <div class="ep a"><div class="ic">💰</div><h3>Earn by making posters</h3><p>Shops, coaching centres and events need posters for every festival and offer. Make them with AI in minutes and take orders from local clients or on Instagram.</p></div>
+   <div class="ep b"><div class="ic">💼</div><h3>Get job-ready</h3><p>Build a professional resume with AI that stands out to recruiters, and learn how to prepare for interviews.</p></div>
+   <div class="ep c"><div class="ic">🌐</div><h3>Land your first client with a website</h3><p>Build a one-page website for a local business and share it by link. This one skill can become your first freelance project.</p></div>
   </div>
+  <p class="note">Earnings and jobs depend on your own effort and practice. The workshop teaches you the skills and how to get started.</p>
  </div>
 </section>
 
@@ -199,11 +214,11 @@ footer{padding:32px 0 120px;text-align:center;font-size:13px;color:var(--mut)}
  <div class="wrap">
   <h2>How the 90 minutes go</h2>
   <ol class="steps">
-   <li><time>8:00</time><div><b>How AI really works</b><span>The few ideas that make every AI tool easier to use.</span></div></li>
-   <li><time>8:15</time><div><b>Poster, live</b><span>Prompt, generate, edit and download.</span></div></li>
-   <li><time>8:35</time><div><b>Resume, live</b><span>From your details to a finished PDF.</span></div></li>
-   <li><time>8:55</time><div><b>Website, live</b><span>A one-page site you can share by link.</span></div></li>
-   <li><time>9:15</time><div><b>Questions and what's next</b><span>Your doubts answered, and how to keep learning.</span></div></li>
+   <li><time>8:00</time><div><b>Ways people earn with AI</b><span>How people earn with AI skills today, and which path suits you.</span></div></li>
+   <li><time>8:15</time><div><b>Make a poster, live</b><span>Prompt, design, edit and download, just like client work.</span></div></li>
+   <li><time>8:35</time><div><b>A job-ready resume</b><span>From your details to a finished PDF.</span></div></li>
+   <li><time>8:55</time><div><b>Build a website, live</b><span>A one-page site you can share by link.</span></div></li>
+   <li><time>9:15</time><div><b>Finding your first client + Q&amp;A</b><span>Where to find work, what to charge, and your questions.</span></div></li>
   </ol>
  </div>
 </section>
@@ -212,9 +227,9 @@ footer{padding:32px 0 120px;text-align:center;font-size:13px;color:var(--mut)}
  <div class="wrap">
   <h2>Who it's for</h2>
   <div class="for">
-   <span>🎓 College students</span><span>💼 Job seekers and freshers</span><span>🧑‍💻 Working professionals</span><span>🏪 Shop and small business owners</span><span>🌱 Total beginners</span>
+   <span>🎓 Students who want a side income</span><span>💼 Freshers looking for a job</span><span>🧑‍💻 Professionals who want to upskill</span><span>🏪 Shop and business owners</span><span>🌱 Complete beginners</span>
   </div>
-  <p class="sub" style="margin-top:16px">All you need is a phone or laptop with internet. Keep it charged and join a few minutes early.</p>
+  <p class="sub" style="margin-top:16px">All you need is a phone or laptop with internet. Keep it charged and join 5 minutes early.</p>
  </div>
 </section>
 
@@ -237,9 +252,10 @@ footer{padding:32px 0 120px;text-align:center;font-size:13px;color:var(--mut)}
 <section style="padding-top:0">
  <div class="wrap faq">
   <h2>Questions</h2>
-  <details><summary>Why only ₹9?</summary><p>We want you to try a live LACSA class before anything else. ₹9 keeps the seats for people who will actually show up.</p></details>
+  <details><summary>Why only ₹9?</summary><p>We want you to try a live LACSA class first. ₹9 keeps the seats for people who will actually show up.</p></details>
   <details><summary>How do I join?</summary><p>After you pay, WhatsApp opens with our number. Send the message and we'll add you to the workshop group. The Zoom link is shared there before 8 PM on 28 November.</p></details>
   <details><summary>Can I join on my phone?</summary><p>Yes. Install the free Zoom app before the workshop. A laptop is easier for the website part, but a phone works.</p></details>
+  <details><summary>Will I definitely earn money or get a job?</summary><p>No honest teacher can guarantee that. We teach the skills and the approach people use to find work and jobs. The practice after that is up to you.</p></details>
   <details><summary>Which language is it in?</summary><p>Simple Hindi with English tech words.</p></details>
   <details><summary>Do I need to know coding?</summary><p>No. Everything is done with free AI tools and plain instructions.</p></details>
   <details><summary>I paid but WhatsApp didn't open.</summary><p>Message us on WhatsApp at +91 62097 21261 with your name and payment ID, and we'll add you.</p></details>
@@ -250,7 +266,7 @@ footer{padding:32px 0 120px;text-align:center;font-size:13px;color:var(--mut)}
  <div class="wrap">
   <div class="final">
    <h2>See you Saturday at 8 PM</h2>
-   <p>Book your seat now and get the Zoom link on WhatsApp.</p>
+   <p>Book your seat for ₹9 and get the Zoom link on WhatsApp.</p>
    <a class="btn" href="#seat">Book my seat · ₹9</a>
   </div>
  </div>
